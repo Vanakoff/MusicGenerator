@@ -9,9 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var logoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        logoImageView.layer.cornerRadius = logoImageView.frame.width / 2
     }
 
 
