@@ -60,8 +60,8 @@
 				685CDA45275A5C4800D10F71 /* SceneDelegate.swift */,
 				685CDA47275A5C4800D10F71 /* ViewController.swift */,
 				685CDA49275A5C4800D10F71 /* Main.storyboard */,
-				685CDA4C275A5C4E00D10F71 /* Assets.xcassets */,
 				685CDA4E275A5C4E00D10F71 /* LaunchScreen.storyboard */,
+				685CDA4C275A5C4E00D10F71 /* Assets.xcassets */,
 				685CDA51275A5C4E00D10F71 /* Info.plist */,
 			);
 			path = MusicGenerator;
