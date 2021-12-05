@@ -13,6 +13,7 @@
 		685CDA4B275A5C4800D10F71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685CDA49275A5C4800D10F71 /* Main.storyboard */; };
 		685CDA4D275A5C4E00D10F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685CDA4C275A5C4E00D10F71 /* Assets.xcassets */; };
 		685CDA50275A5C4E00D10F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685CDA4E275A5C4E00D10F71 /* LaunchScreen.storyboard */; };
+		689226EE275C35E9001240FE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689226ED275C35E9001240FE /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		685CDA4C275A5C4E00D10F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		685CDA4F275A5C4E00D10F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		685CDA51275A5C4E00D10F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689226ED275C35E9001240FE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				685CDA43275A5C4800D10F71 /* AppDelegate.swift */,
 				685CDA45275A5C4800D10F71 /* SceneDelegate.swift */,
 				685CDA47275A5C4800D10F71 /* ViewController.swift */,
+				689226ED275C35E9001240FE /* Question.swift */,
 				685CDA49275A5C4800D10F71 /* Main.storyboard */,
 				685CDA4E275A5C4E00D10F71 /* LaunchScreen.storyboard */,
 				685CDA4C275A5C4E00D10F71 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				685CDA48275A5C4800D10F71 /* ViewController.swift in Sources */,
+				689226EE275C35E9001240FE /* Question.swift in Sources */,
 				685CDA44275A5C4800D10F71 /* AppDelegate.swift in Sources */,
 				685CDA46275A5C4800D10F71 /* SceneDelegate.swift in Sources */,
 			);
