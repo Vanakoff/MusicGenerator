@@ -8,17 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
+    //MARK: Instance of Model
+    let questions = Question.getQuestions()
+
+    //MARK: Outlets
     @IBOutlet var logoImageView: UIImageView!
     
+    //MARK: Settings
     override func viewDidLoad() {
         super.viewDidLoad()
        
         logoImageView.layer.cornerRadius = logoImageView.frame.width / 2
     }
     
-    
+    //MARK: Actions
     @IBAction func howItWorksButtonTapped() {
         showAlert(title: "Music Generator", message: "Choose answers that matches best on current you to get the most interesting musical playlist")
     }
