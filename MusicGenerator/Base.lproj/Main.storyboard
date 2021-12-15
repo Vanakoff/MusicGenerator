@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="MusicGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                                 <state key="normal" title="Start Quiz!"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -119,7 +119,7 @@
         <!--Question №-->
         <scene sceneID="9b6-R0-PJF">
             <objects>
-                <viewController id="EZm-pl-ujB" sceneMemberID="viewController">
+                <viewController id="EZm-pl-ujB" customClass="QuestionsViewController" customModule="MusicGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0bi-Zy-DzM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" red="0.92811214923858643" green="0.90306627750396729" blue="0.056978814303874969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="singleAnswerButtonPressed:" destination="EZm-pl-ujB" eventType="touchUpInside" id="eVh-Uj-1VB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW0-yP-0pP">
                                                 <rect key="frame" x="0.0" y="56" width="73" height="36"/>
@@ -145,6 +148,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" red="0.92811214923858643" green="0.90306627750396729" blue="0.056978814303874969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="singleAnswerButtonPressed:" destination="EZm-pl-ujB" eventType="touchUpInside" id="phM-ew-jVf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCr-iq-b3G">
                                                 <rect key="frame" x="0.0" y="112" width="73" height="36"/>
@@ -153,6 +159,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" red="0.92811214923858643" green="0.90306627750396729" blue="0.056978814303874969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="singleAnswerButtonPressed:" destination="EZm-pl-ujB" eventType="touchUpInside" id="C0I-Zl-UR9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAe-Po-sRx">
                                                 <rect key="frame" x="0.0" y="168" width="73" height="36"/>
@@ -161,6 +170,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" red="0.92811214923858643" green="0.90306627750396729" blue="0.056978814303874969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="singleAnswerButtonPressed:" destination="EZm-pl-ujB" eventType="touchUpInside" id="fOQ-7s-jI4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -263,6 +275,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="multipleAnswerButtonPressed" destination="EZm-pl-ujB" eventType="touchUpInside" id="F7y-yr-HYo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -282,7 +297,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVU-PO-0JF">
-                                <rect key="frame" x="30" y="242.5" width="315" height="300"/>
+                                <rect key="frame" x="30" y="183.5" width="315" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-74-Gk0">
                                         <rect key="frame" x="20" y="63.5" width="275" height="173.5"/>
@@ -315,7 +330,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="PPz-My-UlI"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -325,6 +340,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="rangedAnswerButtonPressed" destination="EZm-pl-ujB" eventType="touchUpInside" id="5WC-cf-zvP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -347,7 +365,7 @@
                                 <color key="progressTintColor" red="0.92811214923858643" green="0.90306627750396729" blue="0.056978814303874969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FQ-x2-ZXl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FQ-x2-ZXl">
                                 <rect key="frame" x="20" y="108" width="335" height="34.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -359,10 +377,10 @@
                         <constraints>
                             <constraint firstItem="23V-1K-b5T" firstAttribute="leading" secondItem="Jgj-Gt-6Ls" secondAttribute="leading" id="2ev-BN-kPA"/>
                             <constraint firstItem="Jgj-Gt-6Ls" firstAttribute="trailing" secondItem="tXr-DC-Ahs" secondAttribute="trailing" constant="30" id="5XO-DO-3cH"/>
+                            <constraint firstItem="EVU-PO-0JF" firstAttribute="centerY" secondItem="0bi-Zy-DzM" secondAttribute="centerY" id="Adj-lR-Hq1"/>
                             <constraint firstItem="EVU-PO-0JF" firstAttribute="leading" secondItem="Jgj-Gt-6Ls" secondAttribute="leading" constant="30" id="Km3-kV-WNm"/>
                             <constraint firstItem="9FQ-x2-ZXl" firstAttribute="leading" secondItem="Jgj-Gt-6Ls" secondAttribute="leading" constant="20" id="Kv2-yb-Kn4"/>
                             <constraint firstItem="Jgj-Gt-6Ls" firstAttribute="trailing" secondItem="9FQ-x2-ZXl" secondAttribute="trailing" constant="20" id="PrC-pd-mjL"/>
-                            <constraint firstItem="EVU-PO-0JF" firstAttribute="top" secondItem="9FQ-x2-ZXl" secondAttribute="bottom" constant="100" id="RMK-Ih-OoA"/>
                             <constraint firstItem="23V-1K-b5T" firstAttribute="top" secondItem="Jgj-Gt-6Ls" secondAttribute="top" id="SfA-Oa-rsG"/>
                             <constraint firstItem="tXr-DC-Ahs" firstAttribute="top" secondItem="9FQ-x2-ZXl" secondAttribute="bottom" constant="100" id="XW3-In-ODd"/>
                             <constraint firstItem="9FQ-x2-ZXl" firstAttribute="top" secondItem="23V-1K-b5T" secondAttribute="bottom" constant="8" symbolic="YES" id="Ykh-Gf-Pq0"/>
@@ -373,13 +391,8 @@
                             <constraint firstItem="zCs-HB-gkU" firstAttribute="top" secondItem="23V-1K-b5T" secondAttribute="bottom" constant="100" id="gUZ-Bw-IwN"/>
                             <constraint firstItem="zCs-HB-gkU" firstAttribute="leading" secondItem="Jgj-Gt-6Ls" secondAttribute="leading" constant="30" id="jpz-OG-dac"/>
                             <constraint firstItem="Jgj-Gt-6Ls" firstAttribute="trailing" secondItem="EVU-PO-0JF" secondAttribute="trailing" constant="30" id="vJG-i1-JA1"/>
-                            <constraint firstItem="EVU-PO-0JF" firstAttribute="centerY" secondItem="0bi-Zy-DzM" secondAttribute="centerY" id="vpV-aY-tut"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="tXr-DC-Ahs"/>
-                                <exclude reference="EVU-PO-0JF"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="etK-Lx-jQR"/>
                             </mask>
@@ -393,6 +406,29 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="multipleQuestionsView" destination="zCs-HB-gkU" id="zwR-wk-olY"/>
+                        <outlet property="multipleStackView" destination="CvW-U4-lGi" id="Ewc-Xo-HTx"/>
+                        <outlet property="questionLabel" destination="9FQ-x2-ZXl" id="hJi-Ii-Xck"/>
+                        <outlet property="questionProgressView" destination="23V-1K-b5T" id="41d-8m-WNm"/>
+                        <outlet property="rangedQuestionsView" destination="EVU-PO-0JF" id="zT4-Qu-Kvg"/>
+                        <outlet property="rangedSlider" destination="8BU-FX-aZe" id="apb-RN-93N"/>
+                        <outlet property="rangedStackView" destination="ay0-74-Gk0" id="fNv-RT-AbT"/>
+                        <outlet property="singleQuestionsView" destination="tXr-DC-Ahs" id="wLM-UN-TEu"/>
+                        <outlet property="singleStackView" destination="6dw-xl-ck4" id="vu1-j2-HAd"/>
+                        <outletCollection property="singleButtons" destination="g4O-w5-HfW" collectionClass="NSMutableArray" id="hIc-5a-2uk"/>
+                        <outletCollection property="singleButtons" destination="GW0-yP-0pP" collectionClass="NSMutableArray" id="mNd-f4-Qfr"/>
+                        <outletCollection property="singleButtons" destination="aCr-iq-b3G" collectionClass="NSMutableArray" id="mNW-bq-Qd2"/>
+                        <outletCollection property="singleButtons" destination="qAe-Po-sRx" collectionClass="NSMutableArray" id="vBu-dT-8KS"/>
+                        <outletCollection property="multipleLabels" destination="svw-uO-x0T" collectionClass="NSMutableArray" id="37j-bT-wCy"/>
+                        <outletCollection property="multipleLabels" destination="YyI-JR-dph" collectionClass="NSMutableArray" id="SH1-UM-uVi"/>
+                        <outletCollection property="multipleLabels" destination="AtM-SL-K8o" collectionClass="NSMutableArray" id="CdA-yF-WKz"/>
+                        <outletCollection property="multipleLabels" destination="eR3-eS-2jN" collectionClass="NSMutableArray" id="TZd-Gb-i7n"/>
+                        <outletCollection property="multipleSwitches" destination="vdD-ua-PU2" collectionClass="NSMutableArray" id="1aE-Cy-b9R"/>
+                        <outletCollection property="multipleSwitches" destination="Yjm-94-Cw9" collectionClass="NSMutableArray" id="dDo-p2-46a"/>
+                        <outletCollection property="multipleSwitches" destination="DKR-Py-ije" collectionClass="NSMutableArray" id="8JR-YG-UZs"/>
+                        <outletCollection property="multipleSwitches" destination="8lw-TJ-fl1" collectionClass="NSMutableArray" id="eR1-LG-1f5"/>
+                        <outletCollection property="rangedLabels" destination="jFd-Yt-REZ" collectionClass="NSMutableArray" id="4t3-Yh-dgQ"/>
+                        <outletCollection property="rangedLabels" destination="Qgs-Qa-iF6" collectionClass="NSMutableArray" id="5hl-ji-Ugg"/>
                         <segue destination="8v4-ge-jSx" kind="show" identifier="showResult" id="qL4-Rx-J2R"/>
                     </connections>
                 </viewController>
@@ -403,7 +439,7 @@
         <!--Result-->
         <scene sceneID="s4K-uV-iRe">
             <objects>
-                <viewController id="8v4-ge-jSx" sceneMemberID="viewController">
+                <viewController id="8v4-ge-jSx" customClass="ResultViewController" customModule="MusicGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8KU-Kk-Oyn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -422,23 +458,79 @@
                                     <constraint firstAttribute="height" constant="230" id="NzO-cy-45k"/>
                                     <constraint firstAttribute="width" constant="230" id="nY7-1q-ymh"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-um-zWy">
+                                <rect key="frame" x="20" y="529" width="335" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH4-eP-QH5">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BvE-Mi-TpL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Share result">
+                                            <color key="titleColor" red="0.92811214919999996" green="0.90306627750000001" blue="0.0569788143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareButtonPressed" destination="8v4-ge-jSx" eventType="touchUpInside" id="rq3-Cf-ENp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9f-5u-P4j">
+                                        <rect key="frame" x="0.0" y="58" width="335" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wWi-g1-9h4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Start again">
+                                            <color key="titleColor" red="0.92811214919999996" green="0.90306627750000001" blue="0.0569788143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="7nt-Kk-5do" kind="unwind" unwindAction="unwindWithSegue:" id="T19-QC-X4s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XjP-af-71g"/>
                         <color key="backgroundColor" red="0.51210671659999996" green="0.74555742739999997" blue="0.087061680850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gIh-IY-xtJ" firstAttribute="leading" secondItem="XjP-af-71g" secondAttribute="leading" constant="20" id="0JM-8B-qpa"/>
+                            <constraint firstItem="DhE-um-zWy" firstAttribute="leading" secondItem="XjP-af-71g" secondAttribute="leading" constant="20" id="4ZD-Zw-7gh"/>
+                            <constraint firstItem="XjP-af-71g" firstAttribute="trailing" secondItem="DhE-um-zWy" secondAttribute="trailing" constant="20" id="9j8-4e-GoP"/>
                             <constraint firstItem="5vM-Ux-vaG" firstAttribute="centerY" secondItem="8KU-Kk-Oyn" secondAttribute="centerY" id="PxT-LB-1PG"/>
+                            <constraint firstItem="XjP-af-71g" firstAttribute="bottom" secondItem="DhE-um-zWy" secondAttribute="bottom" constant="30" id="S6H-Fz-zPL"/>
                             <constraint firstItem="gIh-IY-xtJ" firstAttribute="top" secondItem="XjP-af-71g" secondAttribute="top" constant="20" id="dpO-z1-030"/>
                             <constraint firstItem="XjP-af-71g" firstAttribute="trailing" secondItem="gIh-IY-xtJ" secondAttribute="trailing" constant="20" id="pc6-B9-Se2"/>
                             <constraint firstItem="5vM-Ux-vaG" firstAttribute="centerX" secondItem="8KU-Kk-Oyn" secondAttribute="centerX" id="yWi-kb-DfU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Result" id="Zss-PX-40C">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7US-bm-6Nk"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Result" id="Zss-PX-40C"/>
+                    <connections>
+                        <outlet property="resultImageView" destination="5vM-Ux-vaG" id="m4V-nA-pAU"/>
+                        <outlet property="resultLabel" destination="gIh-IY-xtJ" id="ltD-fk-AUV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Gp-7d-R6Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7nt-Kk-5do" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2189.5999999999999" y="63.418290854572717"/>
         </scene>

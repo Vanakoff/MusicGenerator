@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroductionViewController: UIViewController {
     
     //MARK: Instance of Model
     let questions = Question.getQuestions()
@@ -31,10 +31,13 @@ class ViewController: UIViewController {
         showAlert(title: "Information", message: "Pet project, MVC based app")
     }
     
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+    }
+    
 }
 
 //MARK: Extensions
-extension ViewController {
+extension IntroductionViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
